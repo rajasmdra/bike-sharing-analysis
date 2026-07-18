@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import numpy as np
+import os
 
 # BIKE RENT BY SEASON
 def create_rent_by_season(df):
@@ -30,7 +31,9 @@ def create_rent_by_user(df):
     return rent_by_user
 
 # IMPORT DATASET
-all_df = pd.read_csv('dashboard_dataset.csv')
+current_dir = os.path.dirname(__abspath__) if '__abspath__' in locals() else os.path.dirname(__file__)
+file_path = os.path.join(current_dir, 'dashboard_dataset.csv')
+all_df = pd.read_csv(file_path)
 
 # COMPONENT FILTER
 min_date = all_df['dteday'].min()
