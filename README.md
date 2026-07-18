@@ -1,4 +1,4 @@
-# Dicoding Collection Dashboard ✨
+# Bike Sharing Analysis ✨
 
 ## Setup Environment - Anaconda
 ```
